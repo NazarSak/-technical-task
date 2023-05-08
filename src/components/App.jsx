@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import getUser from "../apiUsers/services";
+import getUser from "apiUsers/services";
 import {Users} from "./users/users";
 
 
