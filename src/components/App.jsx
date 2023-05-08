@@ -26,7 +26,7 @@ function App() {
         }
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [usersStorage]);
 
 
   return (
