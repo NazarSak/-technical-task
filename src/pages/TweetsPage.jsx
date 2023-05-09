@@ -1,3 +1,4 @@
+
 import {useEffect, useState} from "react";
 import getUser from "apiUsers/services";
 import { Users } from "components/users/users";
@@ -26,7 +27,8 @@ import { Users } from "components/users/users";
         }
       })
       .catch((error) => console.log(error));
-  }, [usersStorage]);
+      // eslint-disable-next-line
+  }, []);
 
 
   return (
