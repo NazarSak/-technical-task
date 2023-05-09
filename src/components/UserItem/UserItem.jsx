@@ -3,7 +3,7 @@ import styles from './usersItem.module.css';
 import logo from "../../image/logo.svg"
 import card from "../../image/card-image.svg"
 
-const UserItem = ({ user, setUsers }) => {
+export const UserItem = ({ user, setUsers }) => {
   const users = JSON.parse(localStorage.getItem('users'));
   const { twets, followers, avatar, id, follow } = user;
 
@@ -69,4 +69,4 @@ const UserItem = ({ user, setUsers }) => {
   );
 };
 
-export default UserItem;
+

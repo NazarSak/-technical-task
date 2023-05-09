@@ -3,11 +3,10 @@ const url = 'https://64552b05a74f994b3353fee8.mockapi.io/User';
 // url.searchParams.append('page', 1);
 // url.searchParams.append('limit', 3);
 
-const getUser = () => {
+export const getUser = () => {
   return fetch(url, {
     method: 'GET',
     headers: { 'content-type': 'application/json' },
   });
 };
 
-export default getUser;
