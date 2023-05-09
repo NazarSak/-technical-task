@@ -1,10 +1,10 @@
-import styles from "./homePage.module.css"
+import styles from './homePage.module.css';
 
 export const HomePage = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <h1 className={styles.header}>
-        Welcome back
+        Welcome back!
         <span role="img" aria-label="Greeting icon">
           💁‍♀️
         </span>

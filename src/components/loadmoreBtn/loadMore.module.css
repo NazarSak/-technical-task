@@ -1,6 +1,18 @@
-.loader{
-    width: 180px;
-    height: 50px;
-
-    cursor: pointer;
+.loader {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  border: aliceblue;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  box-shadow: rgb(0 0 0 / 25%) 0px 3.43693px 3.43693px;
+  cursor: pointer;
+  border-radius: 10px;
 }

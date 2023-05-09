@@ -23,7 +23,8 @@ export const Users = ({ users, setUsers }) => {
       {sliceUser.map(user => {
         return <UserItem key={user.id} user={user} setUsers={setUsers} />;
       })}
-   <LoadmoreBtn onClick={onClick} /> 
+      
+   {perPage < 27 ? <LoadmoreBtn onClick={onClick} /> : <h2>That's all</h2>}
     </ul>
   );
 };

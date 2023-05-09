@@ -1,4 +1,10 @@
-.header{
-    font-Size:30px;
-    color: black;
+.header {
+  font-size: 30px;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
