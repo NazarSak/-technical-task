@@ -5,6 +5,7 @@ import { Users } from "components/users/users";
 
  export const  TweetPage = () => {
   const [users, setUsers] = useState([]);
+ 
   const usersStorage = JSON.parse(localStorage.getItem('users'));
 
   useEffect(() => {
@@ -28,6 +29,10 @@ import { Users } from "components/users/users";
       .catch((error) => console.log(error));
       // eslint-disable-next-line
   }, []);
+
+  // const onLoadMore = () => {
+  //   setPage(prevState => prevState + 1);
+  // };
 
 
   return (

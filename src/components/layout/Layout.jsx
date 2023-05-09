@@ -1,8 +1,7 @@
 import React from 'react';
-import { Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { Suspense } from 'react';
-import styled from './layout.module.css';
-import { startTransition } from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Suspense, startTransition } from 'react';
+
 
 export const Layout = () => {
   const location = useLocation();
@@ -24,7 +23,7 @@ export const Layout = () => {
     <div>
       {location.pathname === '/' && (
         <button type="button" onClick={() => handleGoTweets(navigate)}>
-          To tweeets
+          To tweets
         </button>
       )}
 
@@ -32,11 +31,12 @@ export const Layout = () => {
         <button
           type="button"
           onClick={() => handleGoHome(navigate)}
-          className={styled.butHome}
+          // className={styled.butHome}
         >
           To home
         </button>
       )}
+
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
