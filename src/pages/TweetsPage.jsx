@@ -26,7 +26,7 @@ import { Users } from "components/users/users";
         }
       })
       .catch((error) => console.log(error));
-  }, [usersStorage]);
+  }, []);
 
 
   return (
