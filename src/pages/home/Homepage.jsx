@@ -1,7 +1,9 @@
+import styles from "./homePage.module.css"
+
 export const HomePage = () => {
   return (
     <div>
-      <h1 style={{fontSize:"30px",color:"black",textTransform:"uppercase"}}>
+      <h1 className={styles.header}>
         Welcome back
         <span role="img" aria-label="Greeting icon">
           💁‍♀️

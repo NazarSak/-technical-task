@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { UserItem } from 'components/UserItem/UserItem';
 import styles from './ul.module.css';
 import { LoadmoreBtn } from 'components/loadmoreBtn/LoadmoreBtn';
 import { useState } from 'react';
 
+
 export const Users = ({ users, setUsers }) => {
-  const [sliceUser, setSliceUser] = useState(users.slice((1, 37)));
-
-  const addsliceUser = users.slice((1, 8));
-
+  const [sliceUser, setSliceUser] = useState(users.slice(1, 3));
+  const [perPage, setPerPage] = useState(3);
   const onClick = () => {
-    setSliceUser(...sliceUser, ...addsliceUser);
-    console.log(sliceUser);
+    setPerPage(perPage + 3);
+    console.log(perPage);
   };
+
+  useEffect(() => {
+    const addsliceUser = [...users].slice(0, perPage);
+    setSliceUser(addsliceUser);
+  }, [perPage, users]);
 
   return (
     <ul className={styles.list}>
-      {users.map(user => {
+      {sliceUser.map(user => {
         return <UserItem key={user.id} user={user} setUsers={setUsers} />;
       })}
-      <LoadmoreBtn onClick={onClick} />
+   <LoadmoreBtn onClick={onClick} /> 
     </ul>
   );
 };
