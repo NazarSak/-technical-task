@@ -1,41 +1,12 @@
 import React from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Suspense, startTransition } from 'react';
-
+import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Navigation } from 'components/navigation/Navigation';
 
 export const Layout = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleGoTweets = navigate => {
-    startTransition(() => {
-      navigate('tweets');
-    });
-  };
-
-  const handleGoHome = navigate => {
-    startTransition(() => {
-      navigate('/');
-    });
-  };
-
   return (
     <div>
-      {location.pathname === '/' && (
-        <button type="button" onClick={() => handleGoTweets(navigate)}>
-          To tweets
-        </button>
-      )}
-
-      {location.pathname === '/tweets' && (
-        <button
-          type="button"
-          onClick={() => handleGoHome(navigate)}
-          // className={styled.butHome}
-        >
-          To home
-        </button>
-      )}
+      <Navigation />
 
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
